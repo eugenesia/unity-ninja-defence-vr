@@ -27,8 +27,8 @@ public class EnemyManager : MonoBehaviour {
 		GameObject newEnemy = Instantiate(ninjaPrefab);
 
 		// Start off at the end of the platform, and move towards player.
-		newEnemy.transform.position = new Vector3(0f, 0f, 150f);
-		newEnemy.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 50f);
+		newEnemy.transform.position = new Vector3(0f, 0f, 120f);
+		//newEnemy.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -500f);
 
 		// Enemy starts off at the far end of the platform.
 		Animator anim = newEnemy.GetComponent<Animator>();
