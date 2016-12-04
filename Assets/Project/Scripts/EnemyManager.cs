@@ -26,14 +26,15 @@ public class EnemyManager : MonoBehaviour {
 	private void SpawnEnemy() {
 		GameObject newEnemy = Instantiate(ninjaPrefab);
 
-		// Start off at the end of the platform, and move towards player.
-		newEnemy.transform.position = new Vector3(0f, 0f, 120f);
-		//newEnemy.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -500f);
+		// Spawn enemy randomly along x-axis on the platform.
+		float xpos = Random.Range(-2.5f, 2.5f);
 
-		// Enemy starts off at the far end of the platform.
+		// Start off at the end of the platform, and move towards player.
+		newEnemy.transform.position = new Vector3(xpos, 0f, 120f);
+
+		// Cause enemies to go into "Run" state so they run towards player.
 		Animator anim = newEnemy.GetComponent<Animator>();
 		anim.SetBool("Moving", true);
 		anim.SetBool("Running", true);
-		//anim.SetFloat("Input Z", -10f);
 	}
 }
