@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
 	// Game score.
 	public int score = 0;
 
+	// Score needed to win.
+	public int winScore = 20;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -24,6 +27,20 @@ public class GameManager : MonoBehaviour {
 		score ++;
 		Debug.Log("Score incremented to: " + score);
 
+		if (score >= winScore) {
+			WinGame();
+		}
+
 		return score;
+	}
+
+	// Declare the game lost.
+	public void LoseGame() {
+		Debug.Log("Game is lost!");
+	}
+
+	// Declare the game won.
+	public void WinGame() {
+		Debug.Log("Game is won!");
 	}
 }
