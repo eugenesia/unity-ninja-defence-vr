@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour {
 	// Increment the score and return new score.
 	public int IncrementScore() {
 		score ++;
-		Debug.Log("Score incremented to: " + score);
-
 		scoreText.text = "Score: " + score;
 
 		if (score >= winScore) {
@@ -41,11 +39,11 @@ public class GameManager : MonoBehaviour {
 
 	// Declare the game lost.
 	public void LoseGame() {
-		Debug.Log("Game is lost!");
+		scoreText.text = "You lose!";
 	}
 
 	// Declare the game won.
 	public void WinGame() {
-		Debug.Log("Game is won!");
+		scoreText.text = "You win!";
 	}
 }
