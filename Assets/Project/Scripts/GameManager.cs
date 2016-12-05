@@ -2,6 +2,7 @@
 /// Manage game win/lose and points.
 /// </summary>
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -12,9 +13,11 @@ public class GameManager : MonoBehaviour {
 	// Score needed to win.
 	public int winScore = 20;
 
+	public Text scoreText;
+
 	// Use this for initialization
 	void Start () {
-	
+		scoreText = GameObject.Find("Score").GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +29,8 @@ public class GameManager : MonoBehaviour {
 	public int IncrementScore() {
 		score ++;
 		Debug.Log("Score incremented to: " + score);
+
+		scoreText.text = "Score: " + score;
 
 		if (score >= winScore) {
 			WinGame();
