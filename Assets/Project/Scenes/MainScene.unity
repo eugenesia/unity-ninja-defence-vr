@@ -655,7 +655,7 @@ GameObject:
   - 4: {fileID: 1270529190}
   - 114: {fileID: 1270529191}
   m_Layer: 0
-  m_Name: SceneController
+  m_Name: Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
