@@ -3,6 +3,7 @@
 /// </summary>
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -45,5 +46,11 @@ public class GameManager : MonoBehaviour {
 	// Declare the game won.
 	public void WinGame() {
 		scoreText.text = "You win!";
+	}
+
+	// Restart the game.
+	public void Restart() {
+		Debug.Log("Restarting game");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }
