@@ -13,9 +13,12 @@ public class Enemy : MonoBehaviour {
 	// Interval between blinks.
 	private float blinkInterval = 0.2f;
 
+	// Game Manager object for game-wide functions.
+	private GameManager gameMgr;
+
 	// Use this for initialization
 	void Start () {
-	
+		gameMgr = GameObject.Find("Game").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +28,9 @@ public class Enemy : MonoBehaviour {
 
 	// Check if we collided with a player projectile, if so it's dead.
 	void OnCollisionEnter(Collision collision) {
+		// Enemy got hit by fire.
 		if (collision.gameObject.CompareTag("Fire")) {
+			gameMgr.IncrementScore();
 			StartCoroutine("Die");
 		}
 	}
