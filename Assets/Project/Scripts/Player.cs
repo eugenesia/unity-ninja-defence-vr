@@ -38,7 +38,10 @@ public class Player : MonoBehaviour {
 
 		// Spawn a new shuriken in front of the player.
 		GameObject shuriken = Instantiate(shurikenPrefab);
-		shuriken.transform.position = transform.position + new Vector3(0f, 0f, 1f);
+
+		// Shuriken should start in front of the camera, offset horizontally from the player.
+		Vector3 posOffset = Vector3.ProjectOnPlane(mainCam.transform.forward, Vector3.up);
+		shuriken.transform.position = transform.position + posOffset;
 
 		// Apply forward and rotational forces to the shuriken so it will rotate
 		// and fly forward.
