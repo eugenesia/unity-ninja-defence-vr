@@ -341,7 +341,7 @@ GameObject:
   - 114: {fileID: 114000010127414312}
   m_Layer: 0
   m_Name: NinjaEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1628,7 +1628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa38bfb62491a4309ac0b4bbacf27b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAlive: 1
 --- !u!114 &114000012169757826
 MonoBehaviour:
   m_ObjectHideFlags: 1
