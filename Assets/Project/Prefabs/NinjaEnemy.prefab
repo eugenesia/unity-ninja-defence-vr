@@ -337,9 +337,9 @@ GameObject:
   - 95: {fileID: 95000011273762734}
   - 114: {fileID: 114000012169757826}
   - 54: {fileID: 54000013146154190}
-  - 135: {fileID: 135000013053474442}
   - 114: {fileID: 114000010127414312}
   - 82: {fileID: 82000013226810344}
+  - 136: {fileID: 136000014217227314}
   m_Layer: 0
   m_Name: NinjaEnemy
   m_TagString: Enemy
@@ -1716,8 +1716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95000011273762734}
   warrior: 1
---- !u!135 &135000013053474442
-SphereCollider:
+--- !u!136 &136000014217227314
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1725,9 +1725,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9
-  m_Center: {x: 0, y: 0.8, z: 0}
+  m_Radius: 0.5
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!137 &137000010952068638
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
