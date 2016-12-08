@@ -1737,7 +1737,7 @@ SkinnedMeshRenderer:
   m_GameObject: {fileID: 1000014245570376}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
