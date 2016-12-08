@@ -16,9 +16,14 @@ public class Enemy : MonoBehaviour {
 	// Game Manager object for game-wide functions.
 	private GameManager gameMgr;
 
+	// Audio source that plays enemy death sound "ugh!"
+	private AudioSource audioSource;
+
+
 	// Use this for initialization
 	void Start () {
 		gameMgr = GameObject.Find("Game").GetComponent<GameManager>();
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +36,10 @@ public class Enemy : MonoBehaviour {
 		// Enemy got hit by fire.
 		if (collision.gameObject.CompareTag("Fire")) {
 			gameMgr.IncrementScore();
+
+			// Play the enemy death sound "ugh!"
+			audioSource.Play();
+
 			StartCoroutine("Die");
 		}
 	}
